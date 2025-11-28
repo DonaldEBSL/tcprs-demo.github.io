@@ -670,6 +670,474 @@
         }
       }
 
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Mobile Responsive Styles */
+      @media (max-width: 768px) {
+        body {
+          font-size: 14px;
+        }
+
+        .demo-controls {
+          position: relative;
+          padding: 10px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-controls-inner {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .demo-title {
+          font-size: 16px;
+          text-align: center;
+        }
+
+        .flow-tabs {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .flow-tab {
+          font-size: 12px;
+          padding: 8px 12px;
+          text-align: center;
+        }
+
+        .demo-nav {
+          flex-direction: column;
+          gap: 8px;
+          width: 100%;
+        }
+
+        .demo-nav button {
+          font-size: 13px;
+          padding: 8px 16px;
+          width: 100%;
+        }
+
+        .step-text {
+          font-size: 12px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .breadcrumb-bar {
+          padding: 8px 10px;
+        }
+
+        .breadcrumb-inner {
+          font-size: 11px;
+          flex-wrap: wrap;
+        }
+
+        .breadcrumb-item span {
+          font-size: 11px;
+        }
+
+        #view-production-btn {
+          position: static !important;
+          display: block !important;
+          width: 100%;
+          margin-top: 10px !important;
+          text-align: center;
+        }
+
+        .tcprs-layout {
+          flex-direction: column;
+          height: auto;
+          min-height: 100vh;
+        }
+
+        .tcprs-branding {
+          width: 100%;
+          min-height: auto;
+          padding: 30px 20px;
+          border-right: none;
+          border-bottom: 3px solid #a3cd6c;
+        }
+
+        .tcprs-logo-large {
+          width: 80px;
+          height: 80px;
+        }
+
+        .tcprs-logo-large svg {
+          width: 80px;
+          height: 80px;
+        }
+
+        .tcprs-title-large {
+          font-size: 18px;
+          margin: 15px 0 10px;
+        }
+
+        .tcprs-subtitle {
+          font-size: 12px;
+        }
+
+        .tcprs-forms {
+          width: 100%;
+          padding: 20px 15px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .form-container {
+          padding: 20px;
+          max-width: 100% !important;
+        }
+
+        .logo-small svg {
+          width: 50px;
+          height: 50px;
+        }
+
+        .page-title {
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+
+        .form-group {
+          margin-bottom: 16px;
+        }
+
+        .form-group label {
+          font-size: 13px;
+          margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+          font-size: 14px;
+          padding: 10px;
+          height: auto;
+          min-height: 42px;
+        }
+
+        .form-group-row {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        .phone-input-group {
+          gap: 8px;
+        }
+
+        .phone-prefix {
+          width: 70px !important;
+          font-size: 14px;
+        }
+
+        .btn {
+          font-size: 14px;
+          padding: 12px;
+          height: auto;
+          min-height: 44px;
+          touch-action: manipulation;
+        }
+
+        .btn-primary,
+        .btn-secondary,
+        .btn-onepass {
+          font-size: 14px;
+        }
+
+        .checkbox-group {
+          font-size: 13px;
+        }
+
+        .checkbox-group input[type='checkbox'] {
+          width: 18px;
+          height: 18px;
+          flex-shrink: 0;
+        }
+
+        .message-box {
+          padding: 15px;
+          font-size: 13px;
+          margin-bottom: 20px;
+        }
+
+        .dashboard-preview {
+          padding: 15px;
+        }
+
+        .dashboard-greeting {
+          font-size: 16px;
+          padding: 15px;
+        }
+
+        .dashboard-card {
+          font-size: 14px;
+          padding: 15px;
+        }
+
+        .divider {
+          font-size: 12px;
+          margin: 15px 0;
+        }
+
+        .link-text {
+          font-size: 12px;
+        }
+
+        .back-link {
+          font-size: 13px;
+        }
+
+        /* OnePass Full Page on Mobile */
+        .onepass-fullpage {
+          top: auto;
+          padding: 20px 15px;
+        }
+
+        .onepass-fullpage > div {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+
+        /* Scenario Modal on Mobile */
+        .scenario-modal-overlay {
+          padding: 15px;
+          align-items: flex-start;
+          overflow-y: auto;
+        }
+
+        .scenario-modal {
+          max-width: 100%;
+          width: calc(100% - 30px);
+          max-height: calc(100vh - 30px);
+          margin: 15px auto;
+          padding: 20px;
+          overflow-y: auto;
+        }
+
+        .scenario-modal-title {
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
+
+        .scenario-modal-description {
+          font-size: 13px;
+          margin-bottom: 15px;
+        }
+
+        .scenario-option {
+          padding: 15px;
+          margin-bottom: 12px;
+        }
+
+        .scenario-option h4 {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+
+        .scenario-option p {
+          font-size: 12px;
+        }
+
+        .scenario-modal-cancel {
+          font-size: 14px;
+          padding: 10px;
+        }
+
+        /* OTP Modal on Mobile */
+        .otp-modal {
+          max-width: calc(100% - 30px);
+          width: calc(100% - 30px);
+          padding: 20px;
+          max-height: calc(100vh - 30px);
+          overflow-y: auto;
+        }
+
+        .otp-modal-title {
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
+
+        .otp-modal-description {
+          font-size: 13px;
+          margin-bottom: 20px;
+        }
+
+        .otp-modal-inputs {
+          gap: 6px;
+          justify-content: center;
+        }
+
+        .otp-modal-inputs input {
+          width: 40px !important;
+          height: 48px !important;
+          font-size: 20px;
+        }
+
+        .otp-inputs {
+          gap: 6px !important;
+        }
+
+        .otp-inputs input {
+          width: 40px !important;
+          height: 48px !important;
+          font-size: 20px !important;
+        }
+
+        .otp-modal-timer {
+          font-size: 12px;
+        }
+
+        .otp-modal-verify {
+          font-size: 14px;
+          padding: 12px;
+          height: auto;
+        }
+
+        .otp-modal-actions {
+          font-size: 13px;
+        }
+
+        /* Password Requirements on Mobile */
+        .password-requirement {
+          font-size: 12px;
+        }
+
+        /* PICS Modal on Mobile */
+        #pics-modal-overlay .otp-modal {
+          max-width: calc(100% - 20px);
+          padding: 15px;
+        }
+
+        #pics-modal-overlay .otp-modal h2 {
+          font-size: 18px;
+        }
+
+        #pics-modal-overlay .otp-modal h3 {
+          font-size: 14px;
+        }
+
+        #pics-modal-overlay .otp-modal p {
+          font-size: 13px;
+        }
+
+        /* System Border adjustments for mobile */
+        .system-tcprs,
+        .system-ciam {
+          border-width: 2px;
+        }
+
+        /* Touch-friendly adjustments */
+        a,
+        button,
+        input[type='checkbox'] {
+          -webkit-tap-highlight-color: rgba(163, 205, 108, 0.3);
+        }
+
+        input,
+        textarea,
+        select {
+          font-size: 16px !important; /* Prevents zoom on iOS */
+        }
+      }
+
+      /* Tablet Styles */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .tcprs-branding {
+          width: 35%;
+        }
+
+        .tcprs-forms {
+          width: 65%;
+        }
+
+        .demo-controls-inner {
+          flex-wrap: wrap;
+        }
+
+        .flow-tabs {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .form-container {
+          max-width: 500px;
+        }
+      }
+
+      /* Small Mobile (iPhone SE, etc) */
+      @media (max-width: 375px) {
+        .demo-title {
+          font-size: 14px;
+        }
+
+        .flow-tab {
+          font-size: 11px;
+          padding: 6px 10px;
+        }
+
+        .page-title {
+          font-size: 18px;
+        }
+
+        .btn {
+          font-size: 13px;
+        }
+
+        .otp-modal-inputs input,
+        .otp-inputs input {
+          width: 35px !important;
+          height: 44px !important;
+          font-size: 18px !important;
+        }
+
+        .scenario-option h4 {
+          font-size: 13px;
+        }
+      }
+
+      /* Landscape Mobile */
+      @media (max-width: 768px) and (orientation: landscape) {
+        .tcprs-branding {
+          padding: 20px;
+        }
+
+        .tcprs-logo-large {
+          width: 60px;
+          height: 60px;
+        }
+
+        .tcprs-logo-large svg {
+          width: 60px;
+          height: 60px;
+        }
+
+        .tcprs-title-large {
+          font-size: 16px;
+          margin: 10px 0 8px;
+        }
+
+        .tcprs-subtitle {
+          font-size: 11px;
+        }
+
+        .onepass-fullpage {
+          padding: 15px 10px;
+        }
+
+        .scenario-modal,
+        .otp-modal {
+          max-height: 90vh;
+        }
+      }
+
       /* OnePass Full Page Mode */
       .onepass-fullpage {
         position: fixed;
@@ -702,6 +1170,263 @@
         z-index: -1;
       }
 
+      /* OTP Modal */
+      .otp-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 10002;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .otp-modal-overlay.active {
+        display: flex;
+      }
+
+      .otp-modal {
+        background: white;
+        border-radius: 8px;
+        padding: 35px 40px;
+        max-width: 480px;
+        width: 90%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        position: relative;
+      }
+
+      .otp-modal-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .otp-modal-description {
+        color: #6d86a1;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .otp-modal-description strong {
+        color: #2c3e50;
+      }
+
+      .otp-modal-inputs {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+
+      .otp-modal-inputs input {
+        width: 52px;
+        height: 60px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        border: 2px solid #d9d9d9;
+        border-radius: 4px;
+        transition: border-color 0.3s;
+      }
+
+      .otp-modal-inputs input:focus {
+        border-color: #a3cd6c;
+        outline: none;
+      }
+
+      .otp-modal-timer {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 13px;
+        color: #6d86a1;
+      }
+
+      .otp-modal-timer .time {
+        color: #e12726;
+        font-weight: 600;
+      }
+
+      .otp-modal-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .otp-modal-verify {
+        width: 100%;
+        padding: 14px;
+        background: #a3cd6c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .otp-modal-verify:hover {
+        background: #8fb858;
+      }
+
+      .otp-modal-actions {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 14px;
+      }
+
+      .otp-modal-actions a {
+        color: #4c6072;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .otp-modal-actions a:hover {
+        color: #a3cd6c;
+      }
+
+      /* Scenario Selection Modal */
+      .scenario-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 10003;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .scenario-modal-overlay.active {
+        display: flex;
+      }
+
+      .scenario-modal {
+        background: white;
+        border-radius: 8px;
+        padding: 35px 40px;
+        max-width: 520px;
+        width: 90%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .scenario-modal-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .scenario-modal-description {
+        color: #6d86a1;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .scenario-option {
+        padding: 18px 20px;
+        border: 2px solid #e5e5e5;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        transition: all 0.3s;
+        background: white;
+      }
+
+      .scenario-option:hover {
+        border-color: #a3cd6c;
+        background: #f9fdf6;
+      }
+
+      .scenario-option h4 {
+        font-size: 16px;
+        color: #2c3e50;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+
+      .scenario-option p {
+        font-size: 13px;
+        color: #6d86a1;
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .scenario-modal-cancel {
+        width: 100%;
+        padding: 12px;
+        background: white;
+        color: #4c6072;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-top: 8px;
+      }
+
+      .scenario-modal-cancel:hover {
+        border-color: #a3cd6c;
+        color: #a3cd6c;
+      }
+
+      /* Request OTP Button */
+      .request-otp-btn {
+        padding: 11px 20px;
+        background: #a3cd6c;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s;
+        white-space: nowrap;
+        height: 44px;
+      }
+
+      .request-otp-btn:hover {
+        background: #8fb858;
+      }
+
+      .request-otp-btn:disabled {
+        background: #d9d9d9;
+        cursor: not-allowed;
+      }
+
+      .input-with-button {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .input-with-button input {
+        flex: 1;
+      }
+
+      .verification-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 8px;
+        font-size: 13px;
+        color: #009e0f;
+        font-weight: 500;
+      }
+
       /* Responsive */
       @media (max-width: 1024px) {
         .tcprs-layout {
@@ -730,7 +1455,7 @@
             Registration Flow
           </div>
           <div class="flow-tab" onclick="switchFlow('registration-onepass')">
-            Registration Flow (OnePass-only)
+            Registration Flow (Alternative)
           </div>
         </div>
         <div class="demo-nav">
@@ -747,6 +1472,13 @@
       <div class="breadcrumb-inner" id="breadcrumb">
         <!-- Dynamically populated -->
       </div>
+      <a
+        id="view-production-btn"
+        href="https://onepass-uat.cic.hk/register"
+        target="_blank"
+        style="display: none; position:absolute;right:0; margin-top: -15px; padding: 6px 14px; background: #0069a6; color: white; text-decoration: none; border-radius: 3px; font-size: 13px; font-weight: 500; transition: background 0.2s; white-space: nowrap;"
+        >View Production Page</a
+      >
     </div>
 
     <!-- Main Layout -->
@@ -821,6 +1553,30 @@
                 </svg>
               </div>
               <h1 class="page-title">登入技術人員註冊制度 Login TCPRS</h1>
+              <!-- Warning/Error Messages (hidden by default) -->
+              <div
+                id="login-warning-message"
+                style="display: none; background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 15px; margin-bottom: 20px;"
+              >
+                <strong style="color: #856404;"
+                  >⚠️ Please sign-in to TCPRS with CIC OnePass</strong
+                ><br />
+                <span style="color: #856404; font-size: 14px;"
+                  >Please use the button below to sign in with your CIC OnePass
+                  account.</span
+                >
+              </div>
+              <div
+                id="login-error-message"
+                style="display: none; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 15px; margin-bottom: 20px;"
+              >
+                <strong style="color: #721c24;">❌ Incorrect Password</strong
+                ><br />
+                <span style="color: #721c24; font-size: 14px;"
+                  >Please attempt to sign-in to TCPRS with CIC OnePass with
+                  button below.</span
+                >
+              </div>
               <form onsubmit="return false;">
                 <div class="form-group">
                   <label
@@ -839,7 +1595,10 @@
                 <div class="forgot-password">
                   <a href="javascript:void(0)">Forgot Password? / 忘記密碼？</a>
                 </div>
-                <button class="btn btn-primary" onclick="goToStep('login', 2)">
+                <button
+                  class="btn btn-primary"
+                  onclick="openLoginStep1ScenarioModal()"
+                >
                   Login / 登入
                 </button>
                 <button
@@ -948,7 +1707,7 @@
 
                   <button
                     class="btn"
-                    onclick="goToStep('login', 3)"
+                    onclick="openLoginScenarioModal()"
                     style="background: #0069a6; color: white; height: 44px; margin-bottom: 0; border-radius: 4px;"
                   >
                     Sign In
@@ -1002,39 +1761,8 @@
             </div>
           </div>
 
-          <!-- Login Screen 3: Scenario Selection -->
+          <!-- Login Screen 3: Scenario A Success (Renumbered from 4) -->
           <div id="login-3" class="screen">
-            <div class="form-container">
-              <h1 class="page-title">Select Demo Scenario</h1>
-              <p
-                style="text-align: center; margin-bottom: 25px; color: #6D86A1;"
-              >
-                Choose a scenario to demonstrate different OnePass integration
-                flows:
-              </p>
-
-              <div class="scenario-card" onclick="goToStep('login', 4)">
-                <h3>✅ Scenario A: Previously Linked Account</h3>
-                <p>OnePass account already linked to TCPRS - Direct login</p>
-              </div>
-
-              <div class="scenario-card" onclick="goToStep('login', 5)">
-                <h3>🔗 Scenario B: Email Match (Not Linked)</h3>
-                <p>
-                  TCPRS account exists with matching email - Requires password
-                  verification
-                </p>
-              </div>
-
-              <div class="scenario-card" onclick="goToStep('login', 7)">
-                <h3>➕ Scenario C: No TCPRS Account</h3>
-                <p>New user needs to register and link OnePass</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Login Screen 4: Scenario A Success -->
-          <div id="login-4" class="screen">
             <div class="form-container">
               <div class="logo-small">
                 <svg width="70" height="70" viewBox="0 0 200 200">
@@ -1067,8 +1795,8 @@
             </div>
           </div>
 
-          <!-- Login Screen 5: Scenario B - Password Verification -->
-          <div id="login-5" class="screen">
+          <!-- Login Screen 4: OnePass user onboarding (Renumbered from 7) -->
+          <div id="login-4" class="screen">
             <div class="form-container">
               <div class="logo-small">
                 <svg width="70" height="70" viewBox="0 0 200 200">
@@ -1083,83 +1811,7 @@
                   </g>
                 </svg>
               </div>
-              <h1 class="page-title">Link OnePass Account</h1>
-              <div class="message-box info">
-                We found an existing TCPRS account with your email.<br />
-                Please verify your TCPRS password to link accounts.
-              </div>
-              <form onsubmit="return false;">
-                <div class="form-group">
-                  <label>Email</label>
-                  <input
-                    type="text"
-                    value="john.doe@example.com"
-                    disabled
-                    style="background: #f5f5f5;"
-                  />
-                </div>
-                <div class="form-group">
-                  <label>TCPRS Account Password</label>
-                  <input
-                    type="password"
-                    placeholder="Enter your TCPRS password"
-                  />
-                </div>
-                <button class="btn btn-primary" onclick="goToStep('login', 6)">
-                  Verify & Link Accounts
-                </button>
-              </form>
-            </div>
-          </div>
-
-          <!-- Login Screen 6: Scenario B Success -->
-          <div id="login-6" class="screen">
-            <div class="form-container">
-              <div class="logo-small">
-                <svg width="70" height="70" viewBox="0 0 200 200">
-                  <path
-                    d="M100,35 L155,65 L155,135 L100,165 L45,135 L45,65 Z"
-                    fill="#a3cd6c"
-                  />
-                  <g transform="translate(100, 100)">
-                    <rect x="-28" y="-18" width="16" height="36" fill="white" />
-                    <rect x="-6" y="-28" width="16" height="46" fill="white" />
-                    <rect x="16" y="-12" width="16" height="30" fill="white" />
-                  </g>
-                </svg>
-              </div>
-              <div class="message-box success">
-                <strong>✅ Accounts Successfully Linked!</strong><br />
-                Your CIC OnePass is now linked to your TCPRS account.<br />
-                You can now use OnePass to login in the future.
-              </div>
-              <h2 style="margin: 25px 0 15px; font-size: 20px;">Dashboard</h2>
-              <div class="dashboard-preview">
-                <div class="dashboard-greeting">Welcome back, John Doe 👋</div>
-                <div class="dashboard-card">📋 My Applications</div>
-                <div class="dashboard-card">👤 My Profile</div>
-                <div class="dashboard-card">📚 CPD Management</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Login Screen 7: Scenario C - New Registration -->
-          <div id="login-7" class="screen">
-            <div class="form-container">
-              <div class="logo-small">
-                <svg width="70" height="70" viewBox="0 0 200 200">
-                  <path
-                    d="M100,35 L155,65 L155,135 L100,165 L45,135 L45,65 Z"
-                    fill="#a3cd6c"
-                  />
-                  <g transform="translate(100, 100)">
-                    <rect x="-28" y="-18" width="16" height="36" fill="white" />
-                    <rect x="-6" y="-28" width="16" height="46" fill="white" />
-                    <rect x="16" y="-12" width="16" height="30" fill="white" />
-                  </g>
-                </svg>
-              </div>
-              <h1 class="page-title">Create TCPRS Account</h1>
+              <h1 class="page-title">OnePass user onboarding</h1>
               <div class="message-box info">
                 No TCPRS account found. Let's create one using your OnePass
                 information.
@@ -1196,31 +1848,58 @@
                 </div>
                 <div class="form-group">
                   <label>Mobile Phone</label>
-                  <div class="phone-input-group">
-                    <input type="text" class="phone-prefix" value="+852" />
-                    <input
-                      type="text"
-                      class="phone-number"
-                      placeholder="12345678"
-                    />
+                  <div class="input-with-button">
+                    <div class="phone-input-group" style="flex: 1;">
+                      <input type="text" class="phone-prefix" value="+852" />
+                      <input
+                        type="text"
+                        class="phone-number"
+                        id="login-phone"
+                        placeholder="12345678"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="request-otp-btn"
+                      onclick="requestOTP('login-phone')"
+                      id="btn-login-phone-otp"
+                    >
+                      Request OTP
+                    </button>
+                  </div>
+                  <div
+                    id="login-phone-verified"
+                    class="verification-status"
+                    style="display: none;"
+                  >
+                    <span>✓</span> Phone verified
                   </div>
                 </div>
                 <div class="checkbox-group">
-                  <input type="checkbox" id="terms-c" />
+                  <input
+                    type="checkbox"
+                    id="terms-c"
+                    onchange="checkLoginOnboardingForm()"
+                  />
                   <label for="terms-c"
                     >I agree with the
                     <a href="javascript:void(0)">Terms & Conditions</a></label
                   >
                 </div>
-                <button class="btn btn-primary" onclick="goToStep('login', 8)">
+                <button
+                  class="btn btn-primary"
+                  id="btn-login-onboarding"
+                  disabled
+                  onclick="goToStep('login', 5)"
+                >
                   Create Account & Link OnePass
                 </button>
               </form>
             </div>
           </div>
 
-          <!-- Login Screen 8: Scenario C Success -->
-          <div id="login-8" class="screen">
+          <!-- Login Screen 5: Success (Renumbered from 8) -->
+          <div id="login-5" class="screen">
             <div class="form-container">
               <div class="logo-small">
                 <svg width="70" height="70" viewBox="0 0 200 200">
@@ -1251,6 +1930,142 @@
               </div>
             </div>
           </div>
+
+          <!-- Login Screen 6: OnePass Migration -->
+          <div id="login-6" class="screen">
+            <div class="form-container">
+              <div class="logo-small">
+                <svg width="70" height="70" viewBox="0 0 200 200">
+                  <path
+                    d="M100,35 L155,65 L155,135 L100,165 L45,135 L45,65 Z"
+                    fill="#a3cd6c"
+                  />
+                  <g transform="translate(100, 100)">
+                    <rect x="-28" y="-18" width="16" height="36" fill="white" />
+                    <rect x="-6" y="-28" width="16" height="46" fill="white" />
+                    <rect x="16" y="-12" width="16" height="30" fill="white" />
+                  </g>
+                </svg>
+              </div>
+              <h1 class="page-title">OnePass Migration</h1>
+              <div class="message-box info">
+                <strong>🔄 Account Migration Required</strong><br />
+                To continue using TCPRS, please set up your new password for CIC
+                OnePass integration.
+              </div>
+
+              <!-- Migration Form -->
+              <form
+                id="migration-form"
+                onsubmit="return false;"
+                style="display: block;"
+              >
+                <div class="form-group">
+                  <label>Email Address / 電郵地址</label>
+                  <input
+                    type="email"
+                    value="john.doe@example.com"
+                    disabled
+                    style="background: #f5f5f5; cursor: not-allowed;"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>New Password / 新密碼 *</label>
+                  <input
+                    id="migration-password"
+                    type="password"
+                    placeholder="Enter new password"
+                    oninput="updateMigrationPasswordRequirements(this); checkMigrationForm();"
+                  />
+                  <div
+                    style="margin-top: 10px; padding: 12px; background: #f5f7fa; border-radius: 4px; font-size: 13px;"
+                  >
+                    <div
+                      style="margin-bottom: 5px; font-weight: 500; color: #4C6072;"
+                    >
+                      Password Requirements:
+                    </div>
+                    <div id="migration-req-length" class="password-requirement">
+                      <span class="requirement-icon">○</span> At least 8
+                      characters (no spaces)
+                    </div>
+                    <div id="migration-req-upper" class="password-requirement">
+                      <span class="requirement-icon">○</span> 1 uppercase letter
+                    </div>
+                    <div id="migration-req-lower" class="password-requirement">
+                      <span class="requirement-icon">○</span> 1 lowercase letter
+                    </div>
+                    <div id="migration-req-number" class="password-requirement">
+                      <span class="requirement-icon">○</span> 1 number
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Confirm Password / 確認密碼 *</label>
+                  <input
+                    id="migration-confirm-password"
+                    type="password"
+                    placeholder="Re-enter new password"
+                    oninput="checkMigrationForm()"
+                  />
+                </div>
+
+                <div class="checkbox-group">
+                  <input
+                    type="checkbox"
+                    id="migration-pics-checkbox"
+                    onchange="checkMigrationForm()"
+                  />
+                  <label for="migration-pics-checkbox">
+                    I have read and agree to the
+                    <a
+                      href="javascript:void(0)"
+                      onclick="openPICSModal()"
+                      style="color: #a3cd6c; text-decoration: underline;"
+                      >CIC OnePass's Personal Information Collection
+                      Statement</a
+                    >
+                  </label>
+                </div>
+
+                <button
+                  class="btn btn-primary"
+                  id="btn-migration-submit"
+                  disabled
+                  onclick="submitMigration()"
+                >
+                  Reset Password / 重設密碼
+                </button>
+              </form>
+
+              <!-- Migration Success (hidden by default) -->
+              <div
+                id="migration-success"
+                style="display: none; text-align: center;"
+              >
+                <div
+                  style="width: 80px; height: 80px; border-radius: 50%; background: #e5f0f6; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;"
+                >
+                  <div
+                    class="loading-spinner"
+                    style="width: 50px; height: 50px; border: 4px solid #e5e5e5; border-top-color: #0069a6; border-radius: 50%; animation: spin 1s linear infinite;"
+                  ></div>
+                </div>
+                <h2
+                  style="font-size: 20px; margin-bottom: 15px; color: #4C6072;"
+                >
+                  Password Changed Successfully
+                </h2>
+                <p style="color: #6D86A1; font-size: 15px; line-height: 1.6;">
+                  Your password has been updated.<br />
+                  Redirecting to CIC OnePass sign-in page in
+                  <strong id="migration-countdown">10</strong> seconds...
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- REGISTRATION FLOW -->
@@ -1275,6 +2090,7 @@
                     >
                     <input
                       type="text"
+                      id="reg-surname"
                       placeholder="CHAN"
                       style="text-transform: uppercase;"
                     />
@@ -1285,22 +2101,65 @@
                         >Identical to HKID card</small
                       ></label
                     >
-                    <input type="text" placeholder="Tai Man" />
+                    <input
+                      type="text"
+                      id="reg-firstname"
+                      placeholder="Tai Man"
+                    />
                   </div>
                 </div>
                 <div class="form-group">
                   <label>Email Address / 電郵地址</label>
-                  <input type="email" placeholder="chan.taiman@example.com" />
+                  <div class="input-with-button">
+                    <input
+                      type="email"
+                      id="reg-email"
+                      placeholder="chan.taiman@example.com"
+                    />
+                    <button
+                      type="button"
+                      class="request-otp-btn"
+                      onclick="requestOTP('email')"
+                      id="btn-email-otp"
+                    >
+                      Request OTP
+                    </button>
+                  </div>
+                  <div
+                    id="email-verified"
+                    class="verification-status"
+                    style="display: none;"
+                  >
+                    <span>✓</span> Email verified
+                  </div>
                 </div>
                 <div class="form-group">
                   <label>Mobile Phone No. / 手提電話號碼</label>
-                  <div class="phone-input-group">
-                    <input type="text" class="phone-prefix" value="+852" />
-                    <input
-                      type="text"
-                      class="phone-number"
-                      placeholder="12345678"
-                    />
+                  <div class="input-with-button">
+                    <div class="phone-input-group" style="flex: 1;">
+                      <input type="text" class="phone-prefix" value="+852" />
+                      <input
+                        type="text"
+                        class="phone-number"
+                        id="reg-phone"
+                        placeholder="12345678"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="request-otp-btn"
+                      onclick="requestOTP('phone')"
+                      id="btn-phone-otp"
+                    >
+                      Request OTP
+                    </button>
+                  </div>
+                  <div
+                    id="phone-verified"
+                    class="verification-status"
+                    style="display: none;"
+                  >
+                    <span>✓</span> Phone verified
                   </div>
                 </div>
                 <div class="form-group">
@@ -1339,7 +2198,7 @@
                   <input
                     type="checkbox"
                     id="terms-reg"
-                    onchange="document.getElementById('btn-submit-reg').disabled = !this.checked"
+                    onchange="checkRegistrationForm()"
                   />
                   <label for="terms-reg"
                     >I have read and agree to the
@@ -1351,7 +2210,7 @@
                   class="btn btn-primary"
                   id="btn-submit-reg"
                   disabled
-                  onclick="goToStep('reg', 2)"
+                  onclick="openScenarioModal()"
                 >
                   Submit / 提交
                 </button>
@@ -1359,23 +2218,138 @@
             </div>
           </div>
 
-          <!-- Registration Screen 2: Processing -->
+          <!-- Registration Screen 2: Scenario Result (Case 1: OnePass Exists Error OR Case 2: Success) -->
           <div id="reg-2" class="screen">
             <div class="form-container">
+              <div class="logo-small">
+                <svg width="70" height="70" viewBox="0 0 200 200">
+                  <path
+                    d="M100,35 L155,65 L155,135 L100,165 L45,135 L45,65 Z"
+                    fill="#a3cd6c"
+                  />
+                  <g transform="translate(100, 100)">
+                    <rect x="-28" y="-18" width="16" height="36" fill="white" />
+                    <rect x="-6" y="-28" width="16" height="46" fill="white" />
+                    <rect x="16" y="-12" width="16" height="30" fill="white" />
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Case 1: OnePass Account Exists Error -->
+              <div id="reg-case1-error" style="display: none;">
+                <h1 class="page-title">Registration Not Available</h1>
+                <div class="message-box error">
+                  <strong>❌ OnePass Account Already Exists</strong><br />
+                  We found an existing CIC OnePass account associated with your
+                  email/phone number.<br /><br />
+                  <strong
+                    >Traditional TCPRS registration is not supported for users
+                    with existing OnePass accounts.</strong
+                  >
+                </div>
+                <div
+                  style="background: #f5f6fa; padding: 20px; border-radius: 4px; margin: 25px 0; text-align: center;"
+                >
+                  <p
+                    style="margin-bottom: 15px; color: #4c6072; font-size: 15px;"
+                  >
+                    Please use your CIC OnePass account to sign in:
+                  </p>
+                  <button
+                    class="btn btn-onepass"
+                    onclick="switchFlow('login'); goToStep('login', 2);"
+                  >
+                    <span>🔐</span> Sign In with CIC OnePass
+                  </button>
+                </div>
+                <div class="link-text">
+                  <a href="javascript:void(0)" onclick="goToStep('reg', 1)"
+                    >← Back to Registration Form</a
+                  >
+                </div>
+              </div>
+
+              <!-- Case 2: Normal Registration Success -->
+              <div id="reg-case2-success" style="display: none;">
+                <h1 class="page-title">Registration Complete!</h1>
+                <div class="message-box success">
+                  <strong>✅ Account Created Successfully</strong><br />
+                  Your TCPRS account has been created with CIC OnePass
+                  integration.<br />
+                  Your identity has been verified and your account is ready to
+                  use.
+                </div>
+                <div
+                  style="background: #f5f6fa; padding: 18px; border-radius: 4px; margin: 20px 0;"
+                >
+                  <h3 style="margin-bottom: 12px; font-size: 16px;">
+                    Account Details:
+                  </h3>
+                  <p style="margin: 6px 0;">
+                    <strong>Name:</strong> CHAN Tai Man
+                  </p>
+                  <p style="margin: 6px 0;">
+                    <strong>Email:</strong> chan.taiman@example.com
+                  </p>
+                  <p style="margin: 6px 0;">
+                    <strong>Phone:</strong> +852 12345678
+                  </p>
+                  <p style="margin: 6px 0;">
+                    <strong>OnePass:</strong>
+                    <span style="color: #0069a6;">✓ Linked & Active</span>
+                  </p>
+                  <p style="margin: 6px 0;">
+                    <strong>Status:</strong>
+                    <span style="color: #009E0F;">✓ Verified</span>
+                  </p>
+                </div>
+                <button
+                  class="btn btn-onepass"
+                  onclick="switchFlow('login'); goToStep('login', 2);"
+                >
+                  <span>🔐</span> Sign In with CIC OnePass
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Registration Screen 3: OnePass Account Creation -->
+          <div id="reg-3" class="screen">
+            <div class="form-container">
+              <div class="logo-small">
+                <svg width="70" height="70" viewBox="0 0 200 200">
+                  <path
+                    d="M100,35 L155,65 L155,135 L100,165 L45,135 L45,65 Z"
+                    fill="#a3cd6c"
+                  />
+                  <g transform="translate(100, 100)">
+                    <rect x="-28" y="-18" width="16" height="36" fill="white" />
+                    <rect x="-6" y="-28" width="16" height="46" fill="white" />
+                    <rect x="16" y="-12" width="16" height="30" fill="white" />
+                  </g>
+                </svg>
+              </div>
               <h1 class="page-title">Processing Registration...</h1>
               <div class="message-box info">
-                Validating your information and checking OnePass status
+                Validating your information and checking account status
               </div>
               <div style="margin-top: 25px;">
                 <div
                   style="padding: 12px; border-left: 3px solid #009E0F; background: #f0f9f0; margin-bottom: 8px; border-radius: 2px;"
                 >
-                  <strong>✓ Validate Account Information</strong>
+                  <strong>✓ OTP Verified</strong>
                 </div>
                 <div
                   style="padding: 12px; border-left: 3px solid #009E0F; background: #f0f9f0; margin-bottom: 8px; border-radius: 2px;"
                 >
-                  <strong>✓ Check Existing TCPRS Account</strong>
+                  <strong>✓ Validate Account Information</strong><br />
+                  <small>Password complexity, format checks passed</small>
+                </div>
+                <div
+                  style="padding: 12px; border-left: 3px solid #009E0F; background: #f0f9f0; margin-bottom: 8px; border-radius: 2px;"
+                >
+                  <strong>✓ Check Existing TCPRS Account</strong><br />
+                  <small>No duplicate account found</small>
                 </div>
                 <div
                   style="padding: 12px; border-left: 3px solid #0069a6; background: #e5f0f6; margin-bottom: 8px; border-radius: 2px;"
@@ -1391,7 +2365,7 @@
               </div>
               <button
                 class="btn btn-primary"
-                onclick="goToStep('reg', 3)"
+                onclick="goToStep('reg', 4)"
                 style="margin-top: 25px;"
               >
                 Continue →
@@ -1399,205 +2373,8 @@
             </div>
           </div>
 
-          <!-- Registration Screen 3: Create OnePass -->
-          <div id="reg-3" class="screen">
-            <div class="form-container">
-              <h1 class="page-title">Creating OnePass Account...</h1>
-              <div class="message-box success">
-                <strong>✅ No existing OnePass account found</strong><br />
-                Creating new OnePass account for you
-              </div>
-              <div style="margin-top: 25px;">
-                <div
-                  style="padding: 12px; border-left: 3px solid #009E0F; background: #f0f9f0; margin-bottom: 8px; border-radius: 2px;"
-                >
-                  <strong>✓ Validate Account Information</strong>
-                </div>
-                <div
-                  style="padding: 12px; border-left: 3px solid #009E0F; background: #f0f9f0; margin-bottom: 8px; border-radius: 2px;"
-                >
-                  <strong>✓ Check Existing TCPRS Account</strong>
-                </div>
-                <div
-                  style="padding: 12px; border-left: 3px solid #009E0F; background: #f0f9f0; margin-bottom: 8px; border-radius: 2px;"
-                >
-                  <strong>✓ OnePass User Lookup</strong>
-                </div>
-                <div
-                  style="padding: 12px; border-left: 3px solid #0069a6; background: #e5f0f6; margin-bottom: 8px; border-radius: 2px;"
-                >
-                  <strong>→ Create OnePass Account</strong><br />
-                  <small>Initiating email/SMS OTP verification...</small>
-                </div>
-              </div>
-              <button
-                class="btn btn-onepass"
-                onclick="goToStep('reg', 4)"
-                style="margin-top: 25px;"
-              >
-                Continue to Verification →
-              </button>
-            </div>
-          </div>
-
-          <!-- Registration Screen 4: OTP (Full Page) -->
-          <div id="reg-4" class="screen onepass-fullpage">
-            <div style="max-width: 420px; width: 100%;">
-              <!-- OnePass Header -->
-              <div style="text-align: center; margin-bottom: 35px;">
-                <svg width="180" height="60" viewBox="0 0 300 100">
-                  <!-- CIC Logo Part -->
-                  <g transform="translate(20, 30)">
-                    <path
-                      d="M15,5 L40,20 L40,45 L15,60 L-10,45 L-10,20 Z"
-                      fill="#2d5a3d"
-                    />
-                    <rect x="5" y="23" width="6" height="14" fill="white" />
-                    <rect x="13" y="18" width="6" height="19" fill="white" />
-                    <rect x="21" y="25" width="6" height="12" fill="white" />
-                  </g>
-                  <!-- OnePass Text -->
-                  <text
-                    x="85"
-                    y="45"
-                    font-size="32"
-                    font-weight="700"
-                    fill="#0069a6"
-                    font-family="Arial, sans-serif"
-                  >
-                    OnePass
-                  </text>
-                  <text
-                    x="85"
-                    y="65"
-                    font-size="11"
-                    fill="#6D86A1"
-                    font-family="Arial, sans-serif"
-                  >
-                    Construction Industry Council
-                  </text>
-                </svg>
-              </div>
-
-              <!-- Verification Box -->
-              <div
-                style="background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; padding: 35px 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"
-              >
-                <div style="text-align: center; margin-bottom: 25px;">
-                  <div
-                    style="width: 60px; height: 60px; border-radius: 50%; background: #e5f0f6; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;"
-                  >
-                    <svg
-                      width="30"
-                      height="30"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#0069a6"
-                      stroke-width="2"
-                    >
-                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                    </svg>
-                  </div>
-                  <h2
-                    style="font-size: 22px; font-weight: 600; color: #2c3e50; margin-bottom: 10px;"
-                  >
-                    Verify Your Identity
-                  </h2>
-                  <p style="color: #6D86A1; font-size: 14px; line-height: 1.5;">
-                    We've sent a verification code to:<br />
-                    <strong style="color: #2c3e50;"
-                      >chan.taiman@example.com</strong
-                    ><br />
-                    <strong style="color: #2c3e50;">+852 *****678</strong>
-                  </p>
-                </div>
-
-                <form onsubmit="return false;">
-                  <div style="margin-bottom: 8px;">
-                    <label
-                      style="display: block; font-weight: 500; color: #2c3e50; margin-bottom: 12px; text-align: center; font-size: 14px;"
-                      >Enter 6-digit code</label
-                    >
-                    <div class="otp-inputs" style="gap: 8px;">
-                      <input
-                        type="text"
-                        maxlength="1"
-                        oninput="moveOTP(this, 1)"
-                        style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
-                      />
-                      <input
-                        type="text"
-                        maxlength="1"
-                        oninput="moveOTP(this, 2)"
-                        style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
-                      />
-                      <input
-                        type="text"
-                        maxlength="1"
-                        oninput="moveOTP(this, 3)"
-                        style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
-                      />
-                      <input
-                        type="text"
-                        maxlength="1"
-                        oninput="moveOTP(this, 4)"
-                        style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
-                      />
-                      <input
-                        type="text"
-                        maxlength="1"
-                        oninput="moveOTP(this, 5)"
-                        style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
-                      />
-                      <input
-                        type="text"
-                        maxlength="1"
-                        style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
-                      />
-                    </div>
-                  </div>
-
-                  <div
-                    style="text-align: center; margin-bottom: 20px; font-size: 13px;"
-                  >
-                    <span style="color: #6D86A1;">Code expires in </span>
-                    <span style="color: #E12726; font-weight: 600;">4:58</span>
-                  </div>
-
-                  <button
-                    class="btn"
-                    onclick="goToStep('reg', 5)"
-                    style="background: #0069a6; color: white; height: 44px; margin-bottom: 15px; border-radius: 4px;"
-                  >
-                    Verify & Continue
-                  </button>
-
-                  <div style="text-align: center;">
-                    <a
-                      href="javascript:void(0)"
-                      style="color: #0069a6; text-decoration: none; font-size: 14px; font-weight: 500;"
-                      >Resend Code</a
-                    >
-                  </div>
-                </form>
-              </div>
-
-              <!-- Footer -->
-              <div
-                style="text-align: center; margin-top: 25px; font-size: 13px; color: #6D86A1;"
-              >
-                Having trouble?
-                <a
-                  href="javascript:void(0)"
-                  style="color: #0069a6; text-decoration: none; font-weight: 500;"
-                  >Contact Support</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Registration Screen 5: Success -->
-          <div id="reg-5" class="screen">
+          <!-- Registration Screen 4: Success -->
+          <div id="reg-4" class="screen">
             <div class="form-container">
               <div class="logo-small">
                 <svg width="70" height="70" viewBox="0 0 200 200">
@@ -1615,8 +2392,10 @@
               <h1 class="page-title">Registration Complete!</h1>
               <div class="message-box success">
                 <strong>✅ Account Created Successfully</strong><br />
-                Your TCPRS account has been created and verified.<br />
-                Your OnePass account is linked and ready to use.
+                Your TCPRS account has been created with CIC OnePass
+                integration.<br />
+                Your identity has been verified and your account is ready to
+                use.
               </div>
               <div
                 style="background: #f5f6fa; padding: 18px; border-radius: 4px; margin: 20px 0;"
@@ -1634,18 +2413,22 @@
                   <strong>Phone:</strong> +852 12345678
                 </p>
                 <p style="margin: 6px 0;">
+                  <strong>OnePass:</strong>
+                  <span style="color: #0069a6;">✓ Linked & Active</span>
+                </p>
+                <p style="margin: 6px 0;">
                   <strong>Status:</strong>
-                  <span style="color: #009E0F;">✓ Verified via OnePass</span>
+                  <span style="color: #009E0F;">✓ Verified</span>
                 </p>
               </div>
-              <button class="btn btn-primary" onclick="goToStep('reg', 6)">
+              <button class="btn btn-primary" onclick="goToStep('reg', 5)">
                 Go to Dashboard
               </button>
             </div>
           </div>
 
-          <!-- Registration Screen 6: Dashboard -->
-          <div id="reg-6" class="screen">
+          <!-- Registration Screen 5: Dashboard -->
+          <div id="reg-5" class="screen">
             <div class="form-container">
               <div class="logo-small">
                 <svg width="70" height="70" viewBox="0 0 200 200">
@@ -1678,7 +2461,7 @@
           </div>
         </div>
 
-        <!-- REGISTRATION FLOW (OnePass-only) -->
+        <!-- Registration Flow (Alternative) -->
         <div
           id="registration-onepass-flow"
           style="display: none; width: 100%; max-width: 480px;"
@@ -1706,20 +2489,149 @@
                 Create your account using CIC OnePass - a unified authentication
                 system for all Construction Industry Council services.
               </p>
-              <button class="btn btn-onepass" onclick="goToStep('regop', 2)">
-                <span>🔐</span> Sign Up / Login with CIC OnePass
+              <button class="btn btn-primary" onclick="goToStep('regop', 2)">
+                Login / Signup with CIC OnePass
+              </button>
+              <div class="divider">OR / 或</div>
+
+              <button
+                class="btn btn-secondary"
+                onclick="switchFlow('registration')"
+              >
+                Register Account / 註冊帳戶
               </button>
               <div class="link-text" style="margin-top: 20px;">
-                Already have an account?
+                Existing TCPRS account?
                 <a href="javascript:void(0)" onclick="switchFlow('login')"
-                  >Login here</a
+                  >按此登入現有 TCPRS帳號</a
                 >
               </div>
             </div>
           </div>
 
-          <!-- RegOP Screen 2: OnePass Sign Up Step 1 (Full Page) -->
+          <!-- RegOP Screen 2: OnePass Login (Full Page) -->
           <div id="regop-2" class="screen onepass-fullpage">
+            <div style="max-width: 420px; width: 100%;">
+              <!-- OnePass Header -->
+              <div style="text-align: center; margin-bottom: 35px;">
+                <svg width="180" height="60" viewBox="0 0 300 100">
+                  <g transform="translate(20, 30)">
+                    <path
+                      d="M15,5 L40,20 L40,45 L15,60 L-10,45 L-10,20 Z"
+                      fill="#2d5a3d"
+                    />
+                    <rect x="5" y="23" width="6" height="14" fill="white" />
+                    <rect x="13" y="18" width="6" height="19" fill="white" />
+                    <rect x="21" y="25" width="6" height="12" fill="white" />
+                  </g>
+                  <text
+                    x="85"
+                    y="45"
+                    font-size="32"
+                    font-weight="700"
+                    fill="#0069a6"
+                    font-family="Arial, sans-serif"
+                  >
+                    OnePass
+                  </text>
+                  <text
+                    x="85"
+                    y="65"
+                    font-size="11"
+                    fill="#6D86A1"
+                    font-family="Arial, sans-serif"
+                  >
+                    Construction Industry Council
+                  </text>
+                </svg>
+              </div>
+
+              <!-- Sign In Box -->
+              <div
+                style="background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; padding: 35px 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"
+              >
+                <h2
+                  style="font-size: 24px; font-weight: 600; color: #2c3e50; margin-bottom: 8px; text-align: center;"
+                >
+                  Sign In
+                </h2>
+                <p
+                  style="text-align: center; color: #6D86A1; font-size: 14px; margin-bottom: 28px;"
+                >
+                  to continue to TCPRS
+                </p>
+
+                <form onsubmit="return false;">
+                  <div class="form-group" style="margin-bottom: 18px;">
+                    <label style="font-weight: 500; color: #2c3e50;"
+                      >Email or Username</label
+                    >
+                    <input
+                      type="text"
+                      value="john.doe@example.com"
+                      style="height: 42px; font-size: 15px;"
+                    />
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 8px;">
+                    <label style="font-weight: 500; color: #2c3e50;"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      value="••••••••"
+                      style="height: 42px; font-size: 15px;"
+                    />
+                  </div>
+
+                  <div style="text-align: right; margin-bottom: 22px;">
+                    <a
+                      href="javascript:void(0)"
+                      style="color: #0069a6; text-decoration: none; font-size: 13px;"
+                      >Forgot password?</a
+                    >
+                  </div>
+
+                  <button
+                    class="btn"
+                    onclick="goToStep('regop', 6)"
+                    style="background: #0069a6; color: white; height: 44px; margin-bottom: 0; border-radius: 4px;"
+                  >
+                    Sign In
+                  </button>
+                </form>
+              </div>
+
+              <!-- Footer Links -->
+              <div
+                style="text-align: center; margin-top: 25px; font-size: 13px; color: #6D86A1;"
+              >
+                <div style="margin-bottom: 8px;">
+                  Don't have an account?
+                  <a
+                    href="javascript:void(0)"
+                    onclick="goToStep('regop', 3)"
+                    style="color: #0069a6; text-decoration: none; font-weight: 500;"
+                    >Sign up</a
+                  >
+                </div>
+              </div>
+
+              <!-- Language Selector -->
+              <div style="text-align: center; margin-top: 20px;">
+                <select
+                  style="padding: 6px 12px; border: 1px solid #d9d9d9; border-radius: 4px; font-size: 13px; color: #4C6072; background: white; cursor: pointer;"
+                >
+                  <option>English</option>
+                  <option>繁體中文</option>
+                  <option>简体中文</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- RegOP Screen 3: OnePass Sign Up Step 1 (Full Page) -->
+          <div id="regop-3" class="screen onepass-fullpage">
             <div style="max-width: 520px; width: 100%;">
               <!-- OnePass Header -->
               <div style="text-align: center; margin-bottom: 35px;">
@@ -1858,7 +2770,7 @@
 
                   <button
                     class="btn"
-                    onclick="goToStep('regop', 3)"
+                    onclick="goToStep('regop', 4)"
                     style="background: #0069a6; color: white; height: 44px; margin-top: 8px; border-radius: 4px;"
                   >
                     Continue
@@ -1879,8 +2791,8 @@
             </div>
           </div>
 
-          <!-- RegOP Screen 3: OnePass Sign Up Step 2 (Full Page) -->
-          <div id="regop-3" class="screen onepass-fullpage">
+          <!-- RegOP Screen 4: OnePass Sign Up Step 2 (Full Page) -->
+          <div id="regop-4" class="screen onepass-fullpage">
             <div style="max-width: 520px; width: 100%;">
               <!-- OnePass Header -->
               <div style="text-align: center; margin-bottom: 35px;">
@@ -2039,7 +2951,7 @@
 
                   <button
                     class="btn"
-                    onclick="goToStep('regop', 4)"
+                    onclick="goToStep('regop', 5)"
                     style="background: #0069a6; color: white; height: 44px; margin-top: 8px; border-radius: 4px;"
                   >
                     Create Account
@@ -2049,8 +2961,8 @@
             </div>
           </div>
 
-          <!-- RegOP Screen 4: OnePass OTP Verification (Full Page) -->
-          <div id="regop-4" class="screen onepass-fullpage">
+          <!-- RegOP Screen 5: OnePass OTP Verification (Full Page) -->
+          <div id="regop-5" class="screen onepass-fullpage">
             <div style="max-width: 420px; width: 100%;">
               <!-- OnePass Header -->
               <div style="text-align: center; margin-bottom: 35px;">
@@ -2130,31 +3042,36 @@
                       <input
                         type="text"
                         maxlength="1"
-                        oninput="moveOTP(this, 1)"
+                        id="otp-1"
+                        oninput="moveModalOTP(this, 1)"
                         style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
                       />
                       <input
                         type="text"
                         maxlength="1"
-                        oninput="moveOTP(this, 2)"
+                        id="otp-2"
+                        oninput="moveModalOTP(this, 2)"
                         style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
                       />
                       <input
                         type="text"
                         maxlength="1"
-                        oninput="moveOTP(this, 3)"
+                        id="otp-3"
+                        oninput="moveModalOTP(this, 3)"
                         style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
                       />
                       <input
                         type="text"
                         maxlength="1"
-                        oninput="moveOTP(this, 4)"
+                        id="otp-4"
+                        oninput="moveModalOTP(this, 4)"
                         style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
                       />
                       <input
                         type="text"
                         maxlength="1"
-                        oninput="moveOTP(this, 5)"
+                        id="otp-5"
+                        oninput="moveModalOTP(this, 5)"
                         style="width: 48px; height: 52px; text-align: center; font-size: 22px; border: 2px solid #d9d9d9; border-radius: 4px;"
                       />
                       <input
@@ -2174,7 +3091,7 @@
 
                   <button
                     class="btn"
-                    onclick="goToStep('regop', 5)"
+                    onclick="goToStep('regop', 6)"
                     style="background: #0069a6; color: white; height: 44px; margin-bottom: 15px; border-radius: 4px;"
                   >
                     Verify & Continue
@@ -2193,8 +3110,8 @@
             </div>
           </div>
 
-          <!-- RegOP Screen 5: TCPRS User Onboarding (Scenario C) -->
-          <div id="regop-5" class="screen">
+          <!-- RegOP Screen 6: TCPRS User Onboarding (Scenario C) -->
+          <div id="regop-6" class="screen">
             <div class="form-container">
               <div class="logo-small">
                 <svg width="70" height="70" viewBox="0 0 200 200">
@@ -2260,8 +3177,11 @@
                   />
                   <label for="terms-op">
                     I have read and agree to the
-                    <a href="javascript:void(0)">TCPRS Terms of Use</a> and
-                    <a href="javascript:void(0)">Privacy Policy</a>.
+                    <a
+                      href="https://tcprs.cic.hk/application/tc?lang=zh-Hant"
+                      target="_blank"
+                      >TCPRS Terms of Use</a
+                    >.
                   </label>
                 </div>
 
@@ -2269,7 +3189,7 @@
                   class="btn btn-primary"
                   id="btn-submit-op"
                   disabled
-                  onclick="goToStep('regop', 6)"
+                  onclick="goToStep('regop', 7)"
                 >
                   Complete Registration
                 </button>
@@ -2277,8 +3197,8 @@
             </div>
           </div>
 
-          <!-- RegOP Screen 6: Registration Complete -->
-          <div id="regop-6" class="screen">
+          <!-- RegOP Screen 7: Registration Complete -->
+          <div id="regop-7" class="screen">
             <div class="form-container">
               <div class="logo-small">
                 <svg width="70" height="70" viewBox="0 0 200 200">
@@ -2337,41 +3257,336 @@
       </div>
     </div>
 
+    <!-- Login Step 1 Scenario Selection Modal -->
+    <div class="scenario-modal-overlay" id="login-step1-scenario-modal-overlay">
+      <div class="scenario-modal">
+        <h2 class="scenario-modal-title">Select Login Scenario</h2>
+        <p class="scenario-modal-description">
+          Choose a login scenario to demonstrate different account states:
+        </p>
+
+        <div class="scenario-option" onclick="selectLoginStep1Scenario(1)">
+          <h4>🔄 Case 1: Migration Unverified</h4>
+          <p style="font-size: 13px; color: #6D86A1; margin-top: 5px;">
+            TCPRS account ✓ - MigrateStatus ✗ 0
+          </p>
+          <p>
+            User has existing TCPRS account BEFORE migration, proceed to OnePass
+            migration for password setup.
+          </p>
+        </div>
+
+        <div class="scenario-option" onclick="selectLoginStep1Scenario(2)">
+          <h4>⚠️ Case 2: Migration Verified</h4>
+          <p style="font-size: 13px; color: #6D86A1; margin-top: 5px;">
+            TCPRS account ✓ - MigrateStatus ✓ 1
+          </p>
+          <p>
+            User has existing TCPRS account BEFORE migration, and already
+            completed migration step.
+          </p>
+        </div>
+
+        <div class="scenario-option" onclick="selectLoginStep1Scenario(3)">
+          <h4>❌ Case 3: New TCPRS + OnePass account</h4>
+          <p style="font-size: 13px; color: #6D86A1; margin-top: 5px;">
+            New user account AFTER TCPRS OnePass migration
+          </p>
+          <p>
+            User should sign in with CIC OnePass instead of traditional
+            email/password.
+          </p>
+        </div>
+
+        <button
+          class="scenario-modal-cancel"
+          onclick="closeLoginStep1ScenarioModal()"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <!-- Login Step 1 Scenario Selection Modal -->
+    <div class="scenario-modal-overlay" id="login-step1-scenario-modal-overlay">
+      <div class="scenario-modal">
+        <h2 class="scenario-modal-title">Select Login Scenario</h2>
+        <p class="scenario-modal-description">
+          Choose a login scenario to demonstrate different account states:
+        </p>
+
+        <div class="scenario-option" onclick="selectLoginStep1Scenario(1)">
+          <h4>🔄 Case 1: Migration Unverified</h4>
+          <p style="font-size: 13px; color: #6D86A1; margin-top: 5px;">
+            TCPRS account ✓ - MigrateStatus ✗ 0
+          </p>
+          <p>
+            User has existing TCPRS account BEFORE migration, proceed to OnePass
+            migration for password setup.
+          </p>
+        </div>
+
+        <div class="scenario-option" onclick="selectLoginStep1Scenario(2)">
+          <h4>⚠️ Case 2: Migration Verified</h4>
+          <p style="font-size: 13px; color: #6D86A1; margin-top: 5px;">
+            TCPRS account ✓ - MigrateStatus ✓ 1
+          </p>
+          <p>
+            User has existing TCPRS account BEFORE migration, and already
+            completed migration step.
+          </p>
+        </div>
+
+        <div class="scenario-option" onclick="selectLoginStep1Scenario(3)">
+          <h4>❌ Case 3: New TCPRS + OnePass account</h4>
+          <p style="font-size: 13px; color: #6D86A1; margin-top: 5px;">
+            New user account AFTER TCPRS OnePass migration
+          </p>
+          <p>
+            User should sign in with CIC OnePass instead of traditional
+            email/password.
+          </p>
+        </div>
+
+        <button
+          class="scenario-modal-cancel"
+          onclick="closeLoginStep1ScenarioModal()"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <!-- Scenario Selection Modal -->
+    <div class="scenario-modal-overlay" id="scenario-modal-overlay">
+      <div class="scenario-modal">
+        <h2 class="scenario-modal-title">Select Demo Scenario</h2>
+        <p class="scenario-modal-description">
+          Choose a registration scenario to demonstrate different OnePass
+          integration flows:
+        </p>
+
+        <div class="scenario-option" onclick="selectRegistrationScenario(1)">
+          <h4>🚫 Case 1: OnePass Account Exists</h4>
+          <p>
+            User has existing OnePass account - Registration not supported,
+            redirect to OnePass login
+          </p>
+        </div>
+
+        <div class="scenario-option" onclick="selectRegistrationScenario(2)">
+          <h4>✅ Case 2: Normal Registration</h4>
+          <p>
+            No TCPRS account + No OnePass account - Create new account with
+            OnePass integration
+          </p>
+        </div>
+
+        <button class="scenario-modal-cancel" onclick="closeScenarioModal()">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <!-- Login Scenario Selection Modal -->
+    <div class="scenario-modal-overlay" id="login-scenario-modal-overlay">
+      <div class="scenario-modal">
+        <h2 class="scenario-modal-title">Select Login Scenario</h2>
+        <p class="scenario-modal-description">
+          Choose a login scenario to demonstrate different OnePass integration
+          flows:
+        </p>
+
+        <div class="scenario-option" onclick="selectLoginScenario(1)">
+          <h4>✅ Case 1: Existing TCPRS + Existing OnePass</h4>
+          <p>
+            User already have TCPRS and OnePass setup - Direct Login to
+            Dashboard
+          </p>
+        </div>
+
+        <div class="scenario-option" onclick="selectLoginScenario(2)">
+          <h4>🆕 Case 2: No TCPRS + Existing OnePass</h4>
+          <p>
+            User does not have TCPRS account - Navigate to OnePass user
+            onboarding
+          </p>
+        </div>
+
+        <button
+          class="scenario-modal-cancel"
+          onclick="closeLoginScenarioModal()"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <!-- OTP Modal -->
+    <div class="otp-modal-overlay" id="otp-modal-overlay">
+      <div class="otp-modal">
+        <h2 class="otp-modal-title" id="otp-modal-title">
+          Email address verification
+        </h2>
+        <p class="otp-modal-description" id="otp-modal-description">
+          An Email has sent to the email address you provided.<br />
+          Please enter the code below to verify your email address.<br />
+          The code is valid for 5 minutes.
+        </p>
+        <div class="otp-modal-inputs">
+          <input
+            type="text"
+            maxlength="1"
+            id="modal-otp-1"
+            oninput="moveModalOTP(this, 1)"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            id="modal-otp-2"
+            oninput="moveModalOTP(this, 2)"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            id="modal-otp-3"
+            oninput="moveModalOTP(this, 3)"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            id="modal-otp-4"
+            oninput="moveModalOTP(this, 4)"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            id="modal-otp-5"
+            oninput="moveModalOTP(this, 5)"
+          />
+          <input type="text" maxlength="1" id="modal-otp-6" />
+        </div>
+        <div class="otp-modal-timer">
+          <span id="otp-timer-text"
+            >Resend (<span class="time" id="otp-timer">17s</span>)</span
+          >
+        </div>
+        <div class="otp-modal-buttons">
+          <button class="otp-modal-verify" onclick="verifyOTP()">Verify</button>
+          <div class="otp-modal-actions">
+            <a onclick="closeOTPModal()">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PICS Modal -->
+    <div class="otp-modal-overlay" id="pics-modal-overlay">
+      <div
+        class="otp-modal"
+        style="max-width: 600px; max-height: 80vh; overflow-y: auto;"
+      >
+        <h2 class="otp-modal-title">
+          Personal Information Collection Statement
+        </h2>
+        <div
+          style="text-align: left; padding: 20px; color: #4C6072; line-height: 1.6;"
+        >
+          <h3 style="font-size: 16px; margin-bottom: 15px; color: #2c3e50;">
+            Purpose of Collection
+          </h3>
+          <p style="margin-bottom: 15px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+
+          <h3 style="font-size: 16px; margin-bottom: 15px; color: #2c3e50;">
+            Classes of Personal Data
+          </h3>
+          <p style="margin-bottom: 15px;">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+
+          <h3 style="font-size: 16px; margin-bottom: 15px; color: #2c3e50;">
+            Use of Personal Data
+          </h3>
+          <p style="margin-bottom: 15px;">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </p>
+
+          <h3 style="font-size: 16px; margin-bottom: 15px; color: #2c3e50;">
+            Transfer of Personal Data
+          </h3>
+          <p style="margin-bottom: 15px;">
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt.
+          </p>
+
+          <h3 style="font-size: 16px; margin-bottom: 15px; color: #2c3e50;">
+            Access and Correction
+          </h3>
+          <p style="margin-bottom: 15px;">
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed quia non numquam eius modi tempora
+            incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          </p>
+        </div>
+        <div class="otp-modal-buttons">
+          <button
+            class="otp-modal-verify"
+            onclick="closePICSModal()"
+            style="width: 100%;"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script>
       let currentFlow = 'login';
       let currentStep = 1;
+      let otpType = '';
+      let emailVerified = false;
+      let phoneVerified = false;
+      let loginPhoneVerified = false;
       const flowSteps = {
-        login: 8,
-        registration: 6,
-        'registration-onepass': 6,
+        login: 6,
+        registration: 3,
+        'registration-onepass': 7,
       };
 
       const stepNames = {
         login: {
           1: 'TCPRS Login Page',
           2: 'OnePass Sign In',
-          3: 'Scenario Selection',
-          4: 'Scenario A - Direct Login',
-          5: 'Scenario B - Verify Password',
-          6: 'Scenario B - Success',
-          7: 'Scenario C - Create Account',
-          8: 'Scenario C - Success',
+          3: 'Dashboard',
+          4: 'OnePass user onboarding',
+          5: 'Success',
+          6: 'OnePass Migration',
         },
         registration: {
           1: 'Registration Form',
-          2: 'Processing',
-          3: 'Create OnePass',
-          4: 'OTP Verification',
-          5: 'Registration Success',
-          6: 'Dashboard',
+          2: 'Scenario Result',
+          3: 'Dashboard',
         },
         'registration-onepass': {
           1: 'TCPRS Landing - Register',
-          2: 'OnePass Sign Up (Step 1)',
-          3: 'OnePass Sign Up (Step 2)',
-          4: 'OnePass OTP Verification',
-          5: 'TCPRS User Onboarding',
-          6: 'Registration Complete',
+          2: 'OnePass Login',
+          3: 'OnePass Sign Up (Step 1)',
+          4: 'OnePass Sign Up (Step 2)',
+          5: 'OnePass OTP Verification',
+          6: 'TCPRS User Onboarding',
+          7: 'Registration Complete',
         },
       };
 
@@ -2453,7 +3668,224 @@
 
       function resetFlow() {
         currentStep = 1;
+        emailVerified = false;
+        phoneVerified = false;
+        loginPhoneVerified = false;
+        // Reset verification UI
+        if (document.getElementById('email-verified')) {
+          document.getElementById('email-verified').style.display = 'none';
+          document.getElementById('btn-email-otp').disabled = false;
+          document.getElementById('btn-email-otp').textContent = 'Request OTP';
+        }
+        if (document.getElementById('phone-verified')) {
+          document.getElementById('phone-verified').style.display = 'none';
+          document.getElementById('btn-phone-otp').disabled = false;
+          document.getElementById('btn-phone-otp').textContent = 'Request OTP';
+        }
+        if (document.getElementById('login-phone-verified')) {
+          document.getElementById('login-phone-verified').style.display =
+            'none';
+          document.getElementById('btn-login-phone-otp').disabled = false;
+          document.getElementById('btn-login-phone-otp').textContent =
+            'Request OTP';
+        }
+        if (document.getElementById('btn-login-onboarding')) {
+          document.getElementById('btn-login-onboarding').disabled = true;
+        }
         updateDisplay();
+      }
+
+      function requestOTP(type) {
+        otpType = type;
+        const modal = document.getElementById('otp-modal-overlay');
+        const title = document.getElementById('otp-modal-title');
+        const description = document.getElementById('otp-modal-description');
+
+        if (type === 'email') {
+          const email =
+            document.getElementById('reg-email').value ||
+            'chan.taiman@example.com';
+          if (!email) {
+            alert('Please enter your email address first.');
+            return;
+          }
+          title.textContent = 'Email address verification';
+          description.innerHTML = `An Email has sent to the email address you provided.<br/>Please enter the code below to verify your email address.<br/>The code is valid for 5 minutes.`;
+        } else if (type === 'phone') {
+          const phone =
+            document.getElementById('reg-phone').value || '+85291234567';
+          if (!phone) {
+            alert('Please enter your phone number first.');
+            return;
+          }
+          title.textContent = 'Phone number verification';
+          description.innerHTML = `An SMS has sent to the phone number you provided.<br/>Please enter the code below to verify your phone number.<br/>The code is valid for 5 minutes.`;
+        } else if (type === 'login-phone') {
+          const phone = document.getElementById('login-phone').value;
+          if (!phone) {
+            alert('Please enter your phone number first.');
+            return;
+          }
+          title.textContent = 'Phone number verification';
+          description.innerHTML = `An SMS has sent to the phone number you provided.<br/>Please enter the code below to verify your phone number.<br/>The code is valid for 5 minutes.`;
+        }
+
+        // Clear previous OTP inputs
+        for (let i = 1; i <= 6; i++) {
+          document.getElementById(`modal-otp-${i}`).value = '';
+        }
+
+        modal.classList.add('active');
+        document.getElementById('modal-otp-1').focus();
+
+        // Start timer
+        startOTPTimer();
+      }
+
+      function closeOTPModal() {
+        document.getElementById('otp-modal-overlay').classList.remove('active');
+      }
+
+      function moveModalOTP(input, index) {
+        if (input.value.length === 1 && index < 6) {
+          const nextInput = document.getElementById(`modal-otp-${index + 1}`);
+          if (nextInput) {
+            nextInput.focus();
+          }
+        }
+      }
+
+      function verifyOTP() {
+        // Collect OTP code
+        let otpCode = '';
+        for (let i = 1; i <= 6; i++) {
+          otpCode += document.getElementById(`modal-otp-${i}`).value;
+        }
+
+        // if (otpCode.length !== 6) {
+        //   alert('Please enter the complete 6-digit code.');
+        //   return;
+        // }
+
+        // Simulate verification (in real app, call backend API)
+        if (otpType === 'email') {
+          emailVerified = true;
+          document.getElementById('email-verified').style.display = 'flex';
+          document.getElementById('btn-email-otp').disabled = true;
+          document.getElementById('btn-email-otp').textContent = 'Verified';
+        } else if (otpType === 'phone') {
+          phoneVerified = true;
+          document.getElementById('phone-verified').style.display = 'flex';
+          document.getElementById('btn-phone-otp').disabled = true;
+          document.getElementById('btn-phone-otp').textContent = 'Verified';
+        } else if (otpType === 'login-phone') {
+          loginPhoneVerified = true;
+          document.getElementById('login-phone-verified').style.display =
+            'flex';
+          document.getElementById('btn-login-phone-otp').disabled = true;
+          document.getElementById('btn-login-phone-otp').textContent =
+            'Verified';
+        }
+
+        closeOTPModal();
+        if (otpType === 'email' || otpType === 'phone') {
+          checkRegistrationForm();
+        } else if (otpType === 'login-phone') {
+          checkLoginOnboardingForm();
+        }
+      }
+
+      function startOTPTimer() {
+        let seconds = 17;
+        const timerElement = document.getElementById('otp-timer');
+        const timerTextElement = document.getElementById('otp-timer-text');
+
+        if (!timerElement || !timerTextElement) {
+          return; // Exit if elements not found
+        }
+
+        const interval = setInterval(() => {
+          seconds--;
+          if (seconds > 0) {
+            if (timerElement) {
+              timerElement.textContent = seconds + 's';
+            }
+          } else {
+            clearInterval(interval);
+            if (timerTextElement) {
+              timerTextElement.innerHTML =
+                '<a onclick="requestOTP(otpType)" style="color: #a3cd6c; cursor: pointer;">Resend</a>';
+            }
+          }
+        }, 1000);
+      }
+
+      function checkRegistrationForm() {
+        const termsChecked = document.getElementById('terms-reg').checked;
+        const submitButton = document.getElementById('btn-submit-reg');
+
+        // Enable submit only if both email and phone are verified AND terms are checked
+        if (emailVerified && phoneVerified && termsChecked) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      }
+
+      function openScenarioModal() {
+        if (!emailVerified || !phoneVerified) {
+          alert('Please verify both email and phone number before submitting.');
+          return;
+        }
+        document
+          .getElementById('scenario-modal-overlay')
+          .classList.add('active');
+      }
+
+      function closeScenarioModal() {
+        document
+          .getElementById('scenario-modal-overlay')
+          .classList.remove('active');
+      }
+
+      function selectRegistrationScenario(caseNum) {
+        closeScenarioModal();
+        goToStep('reg', 2);
+
+        // Show appropriate result based on case
+        if (caseNum === 1) {
+          // Case 1: OnePass Account Exists - Show error
+          document.getElementById('reg-case1-error').style.display = 'block';
+          document.getElementById('reg-case2-success').style.display = 'none';
+        } else if (caseNum === 2) {
+          // Case 2: Normal Registration - Show success
+          document.getElementById('reg-case1-error').style.display = 'none';
+          document.getElementById('reg-case2-success').style.display = 'block';
+        }
+      }
+
+      function openLoginScenarioModal() {
+        document
+          .getElementById('login-scenario-modal-overlay')
+          .classList.add('active');
+      }
+
+      function closeLoginScenarioModal() {
+        document
+          .getElementById('login-scenario-modal-overlay')
+          .classList.remove('active');
+      }
+
+      function selectLoginScenario(caseNum) {
+        closeLoginScenarioModal();
+
+        if (caseNum === 1) {
+          // Case 1: Existing TCPRS + Existing OnePass -> Direct Login (Dashboard)
+          goToStep('login', 3);
+        } else if (caseNum === 2) {
+          // Case 2: No TCPRS + Existing OnePass -> Onboarding
+          goToStep('login', 4);
+        }
       }
 
       function updateDisplay() {
@@ -2499,9 +3931,6 @@
         if (isOnePassScreen) {
           // User is in OnePass CIAM (external system)
           layout.classList.add('system-ciam');
-        } else if (currentFlow === 'login' && currentStep === 3) {
-          // Scenario selection screen (demo only)
-          layout.classList.add('system-demo');
         } else {
           // TCPRS system (default)
           layout.classList.add('system-tcprs');
@@ -2510,10 +3939,14 @@
 
       function updateBreadcrumb() {
         const breadcrumb = document.getElementById('breadcrumb');
+        const viewProductionBtn = document.getElementById(
+          'view-production-btn'
+        );
+
         let flowName = 'Login Flow';
         if (currentFlow === 'registration') flowName = 'Registration Flow';
         if (currentFlow === 'registration-onepass')
-          flowName = 'Registration Flow (OnePass-only)';
+          flowName = 'Registration Flow (Alternative)';
 
         const stepName = stepNames[currentFlow][currentStep];
 
@@ -2530,6 +3963,13 @@
             <span>Step ${currentStep}: ${stepName}</span>
           </div>
         `;
+
+        // Show "View Production Page" button only on regop-3 (OnePass Sign Up Step 1)
+        if (currentFlow === 'registration-onepass' && currentStep === 3) {
+          viewProductionBtn.style.display = 'block';
+        } else {
+          viewProductionBtn.style.display = 'none';
+        }
       }
 
       function updatePasswordRequirements(input) {
@@ -2563,6 +4003,137 @@
         if (input.value.length === 1 && index < 5) {
           input.parentElement.children[index].focus();
         }
+      }
+
+      function checkLoginOnboardingForm() {
+        const termsChecked = document.getElementById('terms-c').checked;
+        const submitButton = document.getElementById('btn-login-onboarding');
+
+        // Enable submit only if phone is verified AND terms are checked
+        if (loginPhoneVerified && termsChecked) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      }
+
+      // Login Step 1 Scenario Modal Functions
+      function openLoginStep1ScenarioModal() {
+        document
+          .getElementById('login-step1-scenario-modal-overlay')
+          .classList.add('active');
+      }
+
+      function closeLoginStep1ScenarioModal() {
+        document
+          .getElementById('login-step1-scenario-modal-overlay')
+          .classList.remove('active');
+      }
+
+      function selectLoginStep1Scenario(caseNum) {
+        closeLoginStep1ScenarioModal();
+
+        // Hide any previous messages
+        document.getElementById('login-warning-message').style.display = 'none';
+        document.getElementById('login-error-message').style.display = 'none';
+
+        if (caseNum === 1) {
+          // Case 1: Migration Unverified - Redirect to OnePass Migration page
+          goToStep('login', 6);
+        } else if (caseNum === 2) {
+          // Case 2: Migration Verified - Show warning message
+          document.getElementById('login-warning-message').style.display =
+            'block';
+        } else if (caseNum === 3) {
+          // Case 3: New TCPRS + OnePass - Show error message
+          document.getElementById('login-error-message').style.display =
+            'block';
+        }
+      }
+
+      // Migration Form Functions
+      function updateMigrationPasswordRequirements(input) {
+        const value = input.value;
+        const hasLength = value.length >= 8 && value.indexOf(' ') === -1;
+        const hasUpper = /[A-Z]/.test(value);
+        const hasLower = /[a-z]/.test(value);
+        const hasNumber = /[0-9]/.test(value);
+
+        document
+          .getElementById('migration-req-length')
+          .classList.toggle('valid', hasLength);
+        document
+          .getElementById('migration-req-upper')
+          .classList.toggle('valid', hasUpper);
+        document
+          .getElementById('migration-req-lower')
+          .classList.toggle('valid', hasLower);
+        document
+          .getElementById('migration-req-number')
+          .classList.toggle('valid', hasNumber);
+
+        const icons = document.querySelectorAll('#login-6 .requirement-icon');
+        if (hasLength) icons[0].textContent = '✓';
+        if (hasUpper) icons[1].textContent = '✓';
+        if (hasLower) icons[2].textContent = '✓';
+        if (hasNumber) icons[3].textContent = '✓';
+      }
+
+      function checkMigrationForm() {
+        const password = document.getElementById('migration-password').value;
+        const confirmPassword = document.getElementById(
+          'migration-confirm-password'
+        ).value;
+        const picsChecked = document.getElementById('migration-pics-checkbox')
+          .checked;
+        const submitButton = document.getElementById('btn-migration-submit');
+
+        // Check password requirements
+        const hasLength = password.length >= 8 && password.indexOf(' ') === -1;
+        const hasUpper = /[A-Z]/.test(password);
+        const hasLower = /[a-z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const passwordValid = hasLength && hasUpper && hasLower && hasNumber;
+
+        // Check if passwords match
+        const passwordsMatch = password === confirmPassword && password !== '';
+
+        // Enable submit only if all conditions are met
+        if (passwordValid && passwordsMatch && picsChecked) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      }
+
+      function submitMigration() {
+        // Hide form, show success message
+        document.getElementById('migration-form').style.display = 'none';
+        document.getElementById('migration-success').style.display = 'block';
+
+        // Start countdown
+        let countdown = 10;
+        const countdownElement = document.getElementById('migration-countdown');
+        const interval = setInterval(() => {
+          countdown--;
+          countdownElement.textContent = countdown;
+          if (countdown <= 0) {
+            clearInterval(interval);
+            // Redirect to OnePass login (Step 2)
+            goToStep('login', 2);
+          }
+        }, 1000);
+      }
+
+      // PICS Modal Functions
+      function openPICSModal() {
+        document.getElementById('pics-modal-overlay').classList.add('active');
+      }
+
+      function closePICSModal() {
+        document
+          .getElementById('pics-modal-overlay')
+          .classList.remove('active');
       }
 
       updateDisplay();
