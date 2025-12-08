@@ -1588,6 +1588,23 @@
                   button below.</span
                 >
               </div>
+              <div
+                id="login-case4-migration-error"
+                style="display: none; background: #fee; border: 1px solid #fcc; border-radius: 4px; padding: 15px; margin-bottom: 20px;"
+              >
+                <strong style="color: #c33;"
+                  >❌ Login Method Not Yet Supported /
+                  此帳號尚未支援目前登入方式</strong
+                ><br />
+                <span style="color: #c33; font-size: 14px;"
+                  >This account does not yet support the current login method.
+                  Please sign in using "Email Address and Password" first and
+                  try again.<br />
+                  <strong
+                    >此帳號尚未支援目前登入方式，請先使用「電郵地址及密碼」進行登入後再試。</strong
+                  ></span
+                >
+              </div>
               <form onsubmit="return false;">
                 <div class="form-group">
                   <label
@@ -3620,10 +3637,20 @@
         <div class="scenario-option" onclick="selectLoginScenario(3)">
           <h4>⚠️ Case 3: 有 TCPRS, 但同時持有另一個 OnePass 帳戶</h4>
           <p>
-            TCPRS 本人持有的另一個「未關聯」的 OnePass帳戶
+            本身已有 TCPRS, 但登入了本人持有的另一個OnePass帳戶 - 要求輸入 TCPRS
+            資料時，會提示帳號已存在
           </p>
-          <p>(eg. 電話號碼註冊)</p>
-          <p>- 要求輸入 TCPRS 資料時，會提示帳號已存在</p>
+        </div>
+
+        <div class="scenario-option" onclick="selectLoginScenario(4)">
+          <h4>❌ Case 4: 有 TCPRS 及 OnePass 帳戶, 但未確認OnePass轉移程序</h4>
+          <p style="font-size: 13px; color: #6D86A1; margin-top: 5px;">
+            TCPRS account ✓ OnePass account ✓ - MigrateStatus ✗ 0
+          </p>
+          <p>
+            本身已有 TCPRS 及OnePass帳戶，但未曾完成OnePass轉移確認程序 -
+            會返回至TCPRS主頁，並出現提示 用戶必須使用 Login Form 登入
+          </p>
         </div>
 
         <button
@@ -4103,6 +4130,10 @@
         } else if (caseNum === 3) {
           // Case 3: Existing TCPRS + Different OnePass -> Onboarding with Email Conflict
           goToStep('login', 8);
+        } else if (caseNum === 4) {
+          // Case 4: Existing TCPRS + Existing OnePass but migration not confirmed -> Back to TCPRS Login with error
+          showCase4MigrationError();
+          goToStep('login', 1);
         }
       }
 
@@ -4254,6 +4285,8 @@
         // Hide any previous messages
         document.getElementById('login-warning-message').style.display = 'none';
         document.getElementById('login-error-message').style.display = 'none';
+        document.getElementById('login-case4-migration-error').style.display =
+          'none';
 
         if (caseNum === 1) {
           // Case 1: Migration Unverified - Redirect to OnePass Migration page
@@ -4362,6 +4395,16 @@
           '0.5';
         document.getElementById('btn-login-email-conflict-otp').style.cursor =
           'not-allowed';
+      }
+
+      // Case 4 Migration Error Function
+      function showCase4MigrationError() {
+        // Hide other messages
+        document.getElementById('login-warning-message').style.display = 'none';
+        document.getElementById('login-error-message').style.display = 'none';
+        // Show Case 4 error
+        document.getElementById('login-case4-migration-error').style.display =
+          'block';
       }
 
       updateDisplay();
