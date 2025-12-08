@@ -2104,6 +2104,138 @@
               </div>
             </div>
           </div>
+
+          <!-- Login Screen 8: OnePass user onboarding (Email Conflict) -->
+          <div id="login-8" class="screen">
+            <div class="form-container">
+              <div class="logo-small">
+                <svg width="70" height="70" viewBox="0 0 200 200">
+                  <path
+                    d="M100,35 L155,65 L155,135 L100,165 L45,135 L45,65 Z"
+                    fill="#a3cd6c"
+                  />
+                  <g transform="translate(100, 100)">
+                    <rect x="-28" y="-18" width="16" height="36" fill="white" />
+                    <rect x="-6" y="-28" width="16" height="46" fill="white" />
+                    <rect x="16" y="-12" width="16" height="30" fill="white" />
+                  </g>
+                </svg>
+              </div>
+              <h1 class="page-title">OnePass user onboarding</h1>
+              <div class="message-box info">
+                No TCPRS account found. Let's create one using your OnePass
+                information.
+              </div>
+              <form onsubmit="return false;">
+                <div class="form-group-row">
+                  <div class="form-group">
+                    <label>Surname (From OnePass)</label>
+                    <input
+                      type="text"
+                      value="DOE"
+                      disabled
+                      style="background: #f5f5f5;"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>First Name (From OnePass)</label>
+                    <input
+                      type="text"
+                      value="John"
+                      disabled
+                      style="background: #f5f5f5;"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <div class="input-with-button">
+                    <input
+                      type="email"
+                      id="login-email-conflict"
+                      value="john.doe@example.com"
+                      placeholder="john.doe@example.com"
+                    />
+                    <button
+                      type="button"
+                      class="request-otp-btn"
+                      onclick="showEmailConflictError()"
+                      id="btn-login-email-conflict-otp"
+                    >
+                      Request OTP
+                    </button>
+                  </div>
+                  <!-- Email Conflict Error Message (hidden by default) -->
+                  <div
+                    id="email-conflict-error"
+                    style="display: none; background: #fee; border: 1px solid #fcc; border-radius: 4px; padding: 12px; margin-top: 10px;"
+                  >
+                    <div
+                      style="color: #c33; font-weight: 600; margin-bottom: 8px;"
+                    >
+                      ❌ Email Already Registered / 電郵已被註冊
+                    </div>
+                    <div
+                      style="color: #c33; font-size: 14px; line-height: 1.5; margin-bottom: 12px;"
+                    >
+                      This email is already registered but has not completed the
+                      account migration process. Please sign in using the TCPRS
+                      website first.<br />
+                      <span style="font-weight: 500;"
+                        >此電郵已被註冊且尚未完成帳戶轉移程序，請先使用 TCPRS
+                        網頁進行登入。</span
+                      >
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      onclick="goToStep('login', 1)"
+                      style="width: 100%; background: #c33; margin: 0;"
+                    >
+                      Go to TCPRS Login / 前往 TCPRS 登入
+                    </button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Mobile Phone (From OnePass)</label>
+                  <div class="phone-input-group">
+                    <input
+                      type="text"
+                      class="phone-prefix"
+                      value="+852"
+                      disabled
+                      style="background: #f5f5f5; cursor: not-allowed; -webkit-text-fill-color: #000; opacity: 1; width: 100px;"
+                    />
+                    <input
+                      type="text"
+                      class="phone-number"
+                      id="login-phone-conflict"
+                      value="12345678"
+                      disabled
+                      style="background: #f5f5f5; cursor: not-allowed; -webkit-text-fill-color: #000; opacity: 1; color: #000;"
+                    />
+                  </div>
+                </div>
+                <div class="checkbox-group">
+                  <input type="checkbox" id="terms-c-conflict" />
+                  <label for="terms-c-conflict">
+                    I agree with the
+                    <a href="javascript:void(0)" style="pointer-events: none;"
+                      >Terms & Conditions</a
+                    >
+                  </label>
+                </div>
+                <button
+                  class="btn btn-primary"
+                  id="btn-login-onboarding-conflict"
+                  disabled
+                  style="cursor: not-allowed; opacity: 0.5;"
+                >
+                  Create Account & Link OnePass
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
 
         <!-- REGISTRATION FLOW -->
@@ -3485,6 +3617,15 @@
           </p>
         </div>
 
+        <div class="scenario-option" onclick="selectLoginScenario(3)">
+          <h4>⚠️ Case 3: 有 TCPRS, 但同時持有另一個 OnePass 帳戶</h4>
+          <p>
+            TCPRS 本人持有的另一個「未關聯」的 OnePass帳戶
+          </p>
+          <p>(eg. 電話號碼註冊)</p>
+          <p>- 要求輸入 TCPRS 資料時，會提示帳號已存在</p>
+        </div>
+
         <button
           class="scenario-modal-cancel"
           onclick="closeLoginScenarioModal()"
@@ -3632,7 +3773,7 @@
       let phoneVerified = false;
       let loginPhoneVerified = false;
       const flowSteps = {
-        login: 7,
+        login: 8,
         registration: 3,
         'registration-onepass': 7,
       };
@@ -3646,6 +3787,7 @@
           5: 'Success',
           6: 'OnePass Migration',
           7: 'Forgot Password',
+          8: 'OnePass user onboarding (Email Conflict)',
         },
         registration: {
           1: 'Registration Form',
@@ -3958,6 +4100,9 @@
         } else if (caseNum === 2) {
           // Case 2: No TCPRS + Existing OnePass -> Onboarding
           goToStep('login', 4);
+        } else if (caseNum === 3) {
+          // Case 3: Existing TCPRS + Different OnePass -> Onboarding with Email Conflict
+          goToStep('login', 8);
         }
       }
 
@@ -4207,6 +4352,16 @@
         document
           .getElementById('pics-modal-overlay')
           .classList.remove('active');
+      }
+
+      // Email Conflict Error Function
+      function showEmailConflictError() {
+        document.getElementById('email-conflict-error').style.display = 'block';
+        document.getElementById('btn-login-email-conflict-otp').disabled = true;
+        document.getElementById('btn-login-email-conflict-otp').style.opacity =
+          '0.5';
+        document.getElementById('btn-login-email-conflict-otp').style.cursor =
+          'not-allowed';
       }
 
       updateDisplay();
