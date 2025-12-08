@@ -2093,32 +2093,91 @@
             </div>
           </div>
 
-          <!-- Login Screen 7: Forgot Password (iframe) -->
-          <div id="login-7" class="screen onepass-fullpage">
-            <div
-              style="max-width: 100%; width: 100%; height: 100%; display: flex; flex-direction: column;"
-            >
-              <!-- Back Button -->
-              <div style="margin-bottom: 15px;">
-                <button
-                  class="btn btn-secondary"
-                  onclick="goToStep('login', 2)"
-                  style="background: #6c757d; color: white; padding: 10px 20px; border-radius: 4px;"
-                >
-                  ← Back to Sign In
-                </button>
+          <!-- Login Screen 7: Forgot Password Form -->
+          <div id="login-7" class="screen">
+            <div class="form-container">
+              <div class="logo-small">
+                <svg width="70" height="70" viewBox="0 0 200 200">
+                  <path
+                    d="M100,35 L155,65 L155,135 L100,165 L45,135 L45,65 Z"
+                    fill="#a3cd6c"
+                  />
+                  <g transform="translate(100, 100)">
+                    <rect x="-28" y="-18" width="16" height="36" fill="white" />
+                    <rect x="-6" y="-28" width="16" height="46" fill="white" />
+                    <rect x="16" y="-12" width="16" height="30" fill="white" />
+                  </g>
+                </svg>
+              </div>
+              <h1 class="page-title">忘記密碼<br />Forgot Password</h1>
+              <p
+                style="text-align: center; color: #6D86A1; margin-bottom: 25px; line-height: 1.6;"
+              >
+                請輸入你的電郵地址以重設密碼<br />
+                Please enter your email address to reset your password
+              </p>
+
+              <!-- Success Message (hidden by default) -->
+              <div
+                id="forgot-password-success"
+                style="display: none; background: #f0f9f0; border: 1px solid #009E0F; border-radius: 4px; padding: 15px; margin-bottom: 20px;"
+              >
+                <strong style="color: #009E0F;">✓ Success / 成功</strong><br />
+                <span style="color: #009E0F; font-size: 14px;">
+                  Reset password email has been sent / 密碼重設電郵已發送
+                </span>
               </div>
 
-              <!-- iframe Container -->
+              <!-- Redirect Message (hidden by default) -->
               <div
-                style="flex: 1; background: white; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+                id="forgot-password-redirect"
+                style="display: none; text-align: center;"
               >
-                <iframe
-                  src="https://onepass-uat.cic.hk/forgot-password"
-                  style="width: 100%; height: 100%; border: none;"
-                  title="CIC OnePass - Forgot Password"
-                ></iframe>
+                <div
+                  style="width: 80px; height: 80px; border-radius: 50%; background: #e5f0f6; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;"
+                >
+                  <div
+                    class="loading-spinner"
+                    style="width: 50px; height: 50px; border: 4px solid #e5e5e5; border-top-color: #0069a6; border-radius: 50%; animation: spin 1s linear infinite;"
+                  ></div>
+                </div>
+                <h2
+                  style="font-size: 18px; margin-bottom: 15px; color: #4C6072;"
+                >
+                  正在轉頁至OnePass 進行密碼重設<br />
+                  Redirecting to OnePass for Password Reset
+                </h2>
+                <p style="color: #6D86A1; font-size: 15px; line-height: 1.6;">
+                  Redirecting in
+                  <strong id="forgot-password-countdown">10</strong> seconds...
+                </p>
               </div>
+
+              <!-- Forgot Password Form -->
+              <form id="forgot-password-form" onsubmit="return false;">
+                <div class="form-group">
+                  <label>電郵地址 / Email Address *</label>
+                  <input
+                    type="email"
+                    id="forgot-password-email"
+                    placeholder="Enter your email address"
+                    oninput="checkForgotPasswordForm()"
+                  />
+                </div>
+                <button
+                  class="btn btn-primary"
+                  id="btn-forgot-password-submit"
+                  disabled
+                  onclick="openForgotPasswordScenarioModal()"
+                >
+                  提交 / Submit
+                </button>
+                <div class="link-text">
+                  <a href="javascript:void(0)" onclick="goToStep('login', 1)">
+                    ← 返回登入 / Back to Login
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
 
@@ -3662,6 +3721,49 @@
       </div>
     </div>
 
+    <!-- Forgot Password Scenario Selection Modal -->
+    <div
+      class="scenario-modal-overlay"
+      id="forgot-password-scenario-modal-overlay"
+    >
+      <div class="scenario-modal">
+        <h2 class="scenario-modal-title">Select Forgot Password Scenario</h2>
+        <p class="scenario-modal-description">
+          Choose a scenario to demonstrate different forgot password flows:
+        </p>
+
+        <div class="scenario-option" onclick="selectForgotPasswordScenario(1)">
+          <h4>📧 Case 1: Email 存在，並且未確認OnePass 帳戶轉移</h4>
+          <p style="font-size: 13px; color: #6D86A1; margin-top: 5px;">
+            Email exists, but OnePass account migration not confirmed
+          </p>
+          <p>
+            將會發送 TCPRS 密碼重設電郵 - Reset password email will be sent via
+            TCPRS system
+          </p>
+        </div>
+
+        <div class="scenario-option" onclick="selectForgotPasswordScenario(2)">
+          <h4>🔄 Case 2: TCPRS 帳號已確認OnePass 轉移 / 新建立的OnePass帳號</h4>
+          <p style="font-size: 13px; color: #6D86A1; margin-top: 5px;">
+            TCPRS account with confirmed OnePass migration OR new OnePass
+            account
+          </p>
+          <p>
+            將會直接跳頁至OnePass 忘記密碼頁 - Will redirect to OnePass forgot
+            password page
+          </p>
+        </div>
+
+        <button
+          class="scenario-modal-cancel"
+          onclick="closeForgotPasswordScenarioModal()"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+
     <!-- OTP Modal -->
     <div class="otp-modal-overlay" id="otp-modal-overlay">
       <div class="otp-modal">
@@ -4266,6 +4368,23 @@
         }
       }
 
+      // Forgot Password Form Validation
+      function checkForgotPasswordForm() {
+        const email = document.getElementById('forgot-password-email').value;
+        const submitButton = document.getElementById(
+          'btn-forgot-password-submit'
+        );
+
+        // Simple email validation
+        const emailValid = email && email.includes('@') && email.includes('.');
+
+        if (emailValid) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      }
+
       // Login Step 1 Scenario Modal Functions
       function openLoginStep1ScenarioModal() {
         document
@@ -4405,6 +4524,88 @@
         // Show Case 4 error
         document.getElementById('login-case4-migration-error').style.display =
           'block';
+      }
+
+      // Forgot Password Form Validation
+      function checkForgotPasswordForm() {
+        const email = document.getElementById('forgot-password-email').value;
+        const submitButton = document.getElementById(
+          'btn-forgot-password-submit'
+        );
+
+        // Simple email validation
+        const emailValid = email && email.includes('@') && email.includes('.');
+
+        if (emailValid) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      }
+
+      // Forgot Password Scenario Modal Functions
+      function openForgotPasswordScenarioModal() {
+        document
+          .getElementById('forgot-password-scenario-modal-overlay')
+          .classList.add('active');
+      }
+
+      function closeForgotPasswordScenarioModal() {
+        document
+          .getElementById('forgot-password-scenario-modal-overlay')
+          .classList.remove('active');
+      }
+
+      function selectForgotPasswordScenario(caseNum) {
+        closeForgotPasswordScenarioModal();
+
+        // Hide form
+        document.getElementById('forgot-password-form').style.display = 'none';
+
+        if (caseNum === 1) {
+          // Case 1: Show success message
+          document.getElementById('forgot-password-success').style.display =
+            'block';
+        } else if (caseNum === 2) {
+          // Case 2: Show redirect message with countdown
+          document.getElementById('forgot-password-redirect').style.display =
+            'block';
+
+          // Start countdown
+          let countdown = 10;
+          const countdownElement = document.getElementById(
+            'forgot-password-countdown'
+          );
+          const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown <= 0) {
+              clearInterval(interval);
+              // Redirect to OnePass forgot password
+              window.open(
+                'https://onepass-uat.cic.hk/forgot-password',
+                '_blank'
+              );
+              // Reset the form after redirect
+              setTimeout(() => {
+                resetForgotPasswordForm();
+              }, 1000);
+            }
+          }, 1000);
+        }
+      }
+
+      function resetForgotPasswordForm() {
+        // Reset form visibility
+        document.getElementById('forgot-password-form').style.display = 'block';
+        document.getElementById('forgot-password-success').style.display =
+          'none';
+        document.getElementById('forgot-password-redirect').style.display =
+          'none';
+
+        // Clear email input
+        document.getElementById('forgot-password-email').value = '';
+        document.getElementById('btn-forgot-password-submit').disabled = true;
       }
 
       updateDisplay();
